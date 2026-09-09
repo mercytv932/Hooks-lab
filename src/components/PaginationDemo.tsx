@@ -8,10 +8,28 @@ export default function PaginationDemo() {
   return (
     <div>
       <h2>Pagination Demo</h2>
+      <p>
+        Page {pagination.currentPage} of {pagination.totalPages}
+      </p>
 
       {currentItems.map((item) => (
         <p key={item}>{item}</p>
       ))}
+
+      <div>
+        <button
+          onClick={pagination.previousPage}
+          disabled={!pagination.canPreviousPage}
+        >
+          Previous
+        </button>
+        <button
+          onClick={pagination.nextPage}
+          disabled={!pagination.canNextPage}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 }
