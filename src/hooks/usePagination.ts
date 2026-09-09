@@ -13,6 +13,11 @@ export function usePagination(
   const canNextPage = currentPage < totalPages;
   const canPreviousPage = currentPage > 1;
 
+  function setPage(pageNumber: number) {
+    const page = Math.min(Math.max(pageNumber, 1), totalPages);
+    setCurrentPage(page);
+  }
+
   function nextPage() {
     if (canNextPage) {
       setCurrentPage(currentPage + 1);
@@ -24,4 +29,17 @@ export function usePagination(
       setCurrentPage(currentPage - 1);
     }
   }
+
+  return {
+    currentPage,
+    totalPages,
+    startIndex,
+    endIndex,
+    itemsOnCurrentPage,
+    setPage,
+    nextPage,
+    previousPage,
+    canNextPage,
+    canPreviousPage,
+  };
 }
