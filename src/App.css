@@ -27,5 +27,29 @@ body {
   padding: 28px;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  
+}
+
+/* button */
+
+button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.25);
+}
+
+button:disabled {
+  background: #d1d5db;
+  color: #6b7280;
+  cursor: not-allowed;
 }
