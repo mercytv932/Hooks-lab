@@ -75,3 +75,23 @@ input:focus {
 input::placeholder {
   color: #9ca3af;
 }
+
+/* heading and paragraph */
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.p > div > p {
+  color: #6b7280;
+}
+
+.app > div > p + p {
+  margin-bottom: 4px;
+}
