@@ -16,7 +16,7 @@ export default function PaginationDemo() {
         <p key={item}>{item}</p>
       ))}
 
-      <div>
+      <div className="pagination-controls">
         <button
           onClick={pagination.previousPage}
           disabled={!pagination.canPreviousPage}
