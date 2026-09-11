@@ -1,8 +1,8 @@
 import { usePagination } from "../hooks/usePagination";
 
 export default function PaginationDemo() {
-  const items = Array.from({ length: 25 }, (_, i) => `Item ${i + 1}`);
-  const pagination = usePagination(items.length, 5);
+  const items = Array.from({ length: 120 }, (_, i) => `Item ${i + 1}`);
+  const pagination = usePagination(items.length, 10);
   const currentItems = items.slice(pagination.startIndex, pagination.endIndex);
 
   return (
